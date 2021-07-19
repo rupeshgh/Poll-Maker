@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    <link rel="stylesheet" href="../css/createpoll.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+  <header id="top">
+    <nav id="nav">
+        <div class="nav-header">
+          <div class="logo">
+            <a href="#"> <img src="../css/logo.png" height="60px" alt=""></a>
+           
+          </div>
+          <!-- <img src="logo.png" class="logo" alt="logo"> -->
+          <div class="links-container">
+            <ul class="links">
+              <li> <a href="#"> <h2>Home</h2></a></li>
+                 
+            </ul>
+            </div>
+        </div>
+       
+      </nav>
+      </header>
+  
+    <div class="createpoll-container">
+        <section class="section-center">
+            <form action="../php/newpoll.php" method='post' id="createpoll-form" enctype="multipart/form-data"> 
+                <p class="alert" id="alert">
+                  <div>
+                <label id="form-label"> PollName</label><br>
+                <input id='name' type=required name='pollname'><br>
+                
+                <label id="form-label"> Total entries</label><br>
+                <input id='counted'min=2 max=5 type=number name='entry-count'><br>
+                
+                 <label id="form-label">Poll type</label><br>
+                 <form action="" id="a">
+                 <div id="poll-type">
+                 <p><input type='radio' id="r1" name='voter' value='Free'>Free</p>
+                  <p><input type='radio' id="r2" name='voter' value='Controlled'>Controlled</p>
+                  <p><input type='radio' id="r3" name='voter' value='FullControlled'> FullControlled</p>
+                 </div>
+                 <label id="form-label">Password For Poll Entry:</label>
+<input id='pass'  type=text name='poll_pass' required><br>
+
+
+<label for="RegDeadlinetime" id="form-label">Registration Deadline</label>
+<input type="datetime-local" id="RegDeadtime" name="regdead" type="required">
+
+<br>
+<label for="Pollstarttime" id="form-label">Poll start</label>
+<input type="datetime-local" id="Pollstarttime" name="pollstart" type="required">
+
+<br>
+
+
+<label for="Pollfinishtime" id="form-label">Poll Deadline</label>
+<input type="datetime-local" id="Pollfinishtime" name="pollend" type="required">
+
+<br>
+<div id="candidate">
+
+</div>
+
+ <!-- <label id="form-label">Image1</label>
+<input type="file" name='upload1'>
+<label id="form-label">candidate1:</label>
+<input id='candidate'  type=text name='candidate1' required><br>
+ 
+
+
+ <label id="form-label">Image2</label>
+<input type="file" name='upload2'>
+<label id="form-label">candidate2:</label>
+<input id='candidate'  type=text name='candidate2' required><br>
+
+<label id="form-label">Image3</label>
+<input type="file" name='upload3'>
+<label id="form-label">candidate3:</label>
+<input id='candidate'  type=text name='candidate3'><br>
+
+
+<label id="form-label">Image4</label>
+<input type="file" name='upload4'>
+<label id="form-label">candidate4:</label>
+<input id='candidate'  type=text name='candidate4'><br>
+
+
+<label id="form-label">Image5</label>
+<input type="file" name='upload5'>
+<label id="form-label">candidate5:</label>
+<input id='candidate'  type=text name='candidate5'><br>  -->
+
+
+                </form>
+                <button type="submit" name='newpoll' class="submit-btn">ADD</button>
+                </div> </p>
+        </form>
+        
+            </div>
+    </section>
+    </div>
+    <footer>
+      <div class="footer">
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h1 class="about">About</h1>
+            <p class="home-para">
+              PollMaker is a web based application that provides a platform for users to create various types of polls.
+              it helps in capturing powerful feedback instantly 
+            </p>
+            <div class="social">
+              <h1>Contact  Us</h1>
+              <div class="social-links">
+             <a href=""> <i class="fab fa-instagram"></i></a>
+             <a href=""><i class="fab fa-facebook"></i></a>
+              <a href=""><i class="fab fa-twitter-square"></i></a>
+            </div>
+            </div>
+
+          </div>
+          <div class="footer-section services">
+            <h1>  Our Services</h1>
+          <div class="list">
+            <ul>
+            <li><a href="createpoll.html">Create Poll</a></li>
+            <li><a href="">Vote</a></li>
+            <li><a href="">Share the Link</a></li>
+            <li><a href="">Evaluate Results</a></li>
+          </ul>
+        </div>
+          <div class=" team">
+            <h1>Our  Team</h1>
+            <div class="list">
+            <ul>
+              <li>Rshijuta Pokherel</li>
+              <li>Rupesh Ghorashainee</li>
+              <li>Sailesh Thapa</li>
+              <li>Shreya Shrestha</li>
+            </ul>
+            </div>
+          </div>
+        </div>
+          <div class="footer-section feedback">
+            <h1 class="feed">FeedBack</h1>
+            <form action="home.html" method="post">
+              <input type="email" class="text-input contact-input" placeholder="Your email address" id="email" name="email">
+              <textarea name="message"class="text-input contact-input" placeholder="Your message" id="message" cols="30" rows="10"></textarea>
+              <button class="btn btn-big" id="btn-big">
+                <i class="far fa-envelope"> Send </i>
+              </button>
+
+            </form>
+
+          </div>
+          
+        </div>
+        <div class="footer-bottom">
+          &copy; KECminorproject 
+        </div>
+      </div>
+    </footer> 
+    <script src="cad.js">
+      
+
+
+
+    </script> 
+</body>
+</html>
